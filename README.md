@@ -72,4 +72,13 @@ Cat.count({legs:4},function(err,data){
  ...
 });
 ```
+###Get random row
+```
+SELECT * FROM cat ORDER BY RAND() LIMIT 1;; 
+```
+```javascript
+var rand = Math.floor(Math.random() * count);
+Cat.findOne().skip(rand).exec(callback);
+```
+
 
